@@ -1,0 +1,381 @@
+.form {
+    border-radius: 25px;
+    padding: 25px;
+    -webkit-box-shadow: 0px 21px 99px 8px #EEE;
+    -moz-box-shadow: 0px 21px 99px 8px #EEE;
+    box-shadow: 0px 21px 99px 8px #EEE;
+    animation: form-animation .5s ease;
+}
+
+.form-textinput {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    height: 50px;
+    border-radius: 25px;
+    border: 0px;
+    background-color: #EEE;
+    margin-top: 10px;
+    padding-left: 25px;
+}
+
+.form-textarea {
+    display: block;
+    width: 100%;
+    min-height: 100px;
+    font-size: 15px;
+    height: 50px;
+    border-radius: 25px;
+    border: 0px;
+    background-color: #EEE;
+    margin-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    resize: none;
+}
+
+.form-label {
+    display: block;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.form-button {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 500;
+    height: 50px;
+    border-radius: 25px;
+    border: 0px;
+    background-color: #92FE9D;
+    background: linear-gradient(90deg, #00B8FF 0%, #92FE9D 100%);
+    margin-top: 25px;
+    color: #FFF;
+    cursor: pointer;
+    outline: none;
+}
+
+.form-button:hover {
+    background-color: #3a47d5;
+    background: linear-gradient(90deg, #00B8FF 0%, #3a47d5 100%);
+    color: #FFF;
+}
+
+.default-form-button {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 500;
+    height: 50px;
+    border-radius: 25px;
+    border: 0px;
+    background-color: #FFF;
+    margin-top: 25px;
+    color: #000;
+    cursor: pointer;
+    outline: none;
+    -webkit-box-shadow: 0px 0px 25px -5px #bdbdbdbf;
+    -moz-box-shadow: 0px 0px 25px -5px #bdbdbdbf;
+    box-shadow: 0px 0px 25px -5px #bdbdbdbf;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.default-form-button:hover {
+    background-color: #fcfcfc;
+    color: #000;
+}
+
+.form-secondary-button {
+    font-size: 15px;
+    font-weight: 500;
+    height: 50px;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 0px;
+    border-radius: 25px;
+    background-color: #FFF;
+    color: #111;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 25px -5px #bdbdbdbf;
+    -moz-box-shadow: 0px 0px 25px -5px #bdbdbdbf;
+    box-shadow: 0px 0px 25px -5px #bdbdbdbf;
+    outline: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.form-secondary-button:hover {
+    transform: scale(1.05);
+}
+
+.form-link {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #111;
+}
+
+.small-form {
+    width: 100%;
+    max-width: 500px;
+}
+
+.big-form {
+    width: 100%;
+    max-width: 1500px;
+}
+
+.checkbox-block {
+    margin: 5px;
+    display: inline-block;
+}
+
+.form-tag {
+    display: inline-block;
+    background-color: #EEE;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.form-image {
+    display: block;
+    width: 50%;
+    object-fit: cover;
+    background-color: #EEE;
+    margin: 0 auto;
+}
+
+.form-card {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 250px;
+    height: 300px;
+    background-color: #FFF;
+    margin: 10px;
+    -webkit-box-shadow: 0px 21px 99px 8px #EEE;
+    -moz-box-shadow: 0px 21px 99px 8px #EEE;
+    box-shadow: 0px 21px 99px 8px #EEE;
+    border-radius: 25px;
+    text-align: center;
+    opacity: 0;
+    animation: card-animation .5s ease forwards;
+    transition: .25s ease;
+}
+
+.form-card:hover {
+    transform: scale(1.25);
+    z-index: 10;
+}
+
+.form-card-info {
+    position: absolute;
+    width: 200px;
+    left: 0;
+    right: 0;
+    bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.form-card-button {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 500;
+    height: 50px;
+    border-radius: 25px;
+    border: 0px;
+    background-color: #845EC2;
+    background: linear-gradient(90deg, #D65DB1 0%, #845EC2 100%);
+    color: #FFF;
+    cursor: pointer;
+    outline: none;
+}
+
+.form-card-button:hover {
+    background-color: #FF6F91;
+    background: linear-gradient(90deg, #D65DB1 0%, #FF6F91 100%);
+    color: #FFF;
+}
+
+.form-card-title {
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #FFF;
+}
+
+.form-card-text {
+    font-weight: 300;
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #FFF;
+}
+
+.form-card-image {
+    width: 250px;
+    height: 300px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.form-card-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background: linear-gradient(180deg, #FFFFFF00 0%, #111 100%);
+    background: -moz-linear-gradient(180deg, #FFFFFF00 0%, #111 100%);
+    opacity: .5;
+}
+
+.form-range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #EEE;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    -webkit-box-shadow: 0px 21px 99px 8px #EEE;
+    -moz-box-shadow: 0px 21px 99px 8px #EEE;
+    box-shadow: 0px 21px 99px 8px #EEE;
+}
+
+.form-range:hover {
+    opacity: 1;
+}
+
+.form-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #3a47d5;
+    cursor: pointer;
+}
+
+.form-range::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #3a47d5;
+    cursor: pointer;
+}
+
+.red-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FF6F91;
+}
+
+.green-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #008E9B;
+}
+
+.form-badge {
+    display: inline-block;
+    height: 50px;
+    width: 150px;
+    -webkit-box-shadow: 0px 0px 25px -5px #bdbdbdbf;
+    -moz-box-shadow: 0px 0px 25px -5px #bdbdbdbf;
+    box-shadow: 0px 0px 25px -5px #bdbdbdbf;
+    padding: 12.5px;
+    line-height: 25px;
+    border-radius: 25px;
+    margin-right: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.form-badge:hover {
+    background-color: #EEE;
+    transform: scale(1.05);
+}
+
+.form-badge p {
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+.chat-message-box-left {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px;
+    color: #FFF;
+    background-color: #845EC2;
+    border-radius: 25px;
+    border-top-left-radius: 0px;
+    animation: message-animation .5s ease;
+    transition: 1s;
+}
+
+.chat-message-box-right {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px;
+    color: #111;
+    background-color: #EEE;
+    border-radius: 25px;
+    border-top-right-radius: 0px;
+    animation: message-animation .5s ease forwards;
+    transition: 1s;
+}
+
+.chat-message {
+    margin: 10px;
+}
+
+@keyframes message-animation {
+    0% {
+        opacity: 0;
+        margin-bottom: 25px;
+    }
+    100% {
+        opacity: 1;
+        margin-bottom: 0px;
+    }
+}
+
+@keyframes form-animation {
+    0% {
+        opacity: 0;
+        margin-top: 25px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+@keyframes card-animation {
+    0% {
+        opacity: 0;
+        margin-top: 25px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 10px;
+    }
+}

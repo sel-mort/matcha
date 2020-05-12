@@ -1,0 +1,42 @@
+#chat-users {
+    overflow: hidden;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 100px;
+    white-space: nowrap;
+}
+
+#message-container {
+    height: 50vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#notification-link {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    color: #FFF;
+    background-color: #FF6F91;
+    animation: notification-link-show 1s ease;
+    animation-iteration-count: 2;
+    -webkit-box-shadow: 0px 0px 25px -5px #bdbdbdbf;
+    -moz-box-shadow: 0px 0px 25px -5px #bdbdbdbf;
+    box-shadow: 0px 0px 25px -5px #bdbdbdbf;
+}
+
+#loader-container {
+    display: none;
+}
+
+@keyframes notification-link-show {
+    0% {
+        background-color: #FF6F91;
+    }
+    50% {
+        background-color: #EEE;
+    }
+    100% {
+        background-color: #FF6F91;
+    }
+}

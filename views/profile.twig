@@ -1,0 +1,81 @@
+{% extends 'layouts/app.twig' %}
+{% block title %}
+	Profile
+{% endblock %}
+{% block header %}
+	{% include "header.twig" %}
+{% endblock %}
+{% block content %}
+	<div class="large centered big-vertical-padding">
+		<div
+			class="form small-form centered">
+			{# <form method="POST" action={{ path_for('profile') }}> #}
+			<h1>Profile</h1>
+			<label class="form-label" for="score">Score</label>
+			<p id="score" name="score" class="form-p"></p>
+			<div id="data-section">
+				<div id="user-profile-data" class="hidden">
+					{{ user_profile }}
+				</div>
+			</div>
+
+			<div class="center vertical-padding">
+				<img id="avatar" class="form-image rounded centered" name="avatar" src=/public/images/user.png></img>
+			<input type="file" id="file" class="hidden" name="file">
+			<button id="add-file" class="small-button" title="Upload image">
+				<i class="material-icons">edit</i>
+			</button>
+		</div>
+		<label class="form-label" for="username">Position</label>
+		<button id="add-position" class="small-button" title="Update position">
+			<i class="material-icons">my_location</i>
+		</button>
+		<input type="text" id="latitude" class="hidden" name="latitude">
+		<input type="text" id="longitude" class="hidden" name="longitude">
+		<label class="form-label" for="username">Username</label>
+		<input id="username" name="username" class="form-textinput" type="text" placeholder="USERNAME"/>
+		<label class="form-label" for="firstname">First name</label>
+		<input id="firstname" name="firstname" class="form-textinput" type="text" placeholder="FIRST NAME"/>
+		<label class="form-label" for="lastname">Last name</label>
+		<input id="lastname" name="lastname" class="form-textinput" type="text" placeholder="LAST NAME"/>
+		<label class="form-label" for="password">Password</label>
+		<input id="password" name="password" class="form-textinput" type="password" placeholder="PASSWORD"/>
+		<label class="form-label" for="email">Email</label>
+		<input id="email" name="email" class="form-textinput" type="email" placeholder="EMAIL"/>
+		<label class="form-label" for="age">Age</label>
+		<input id="age" name="age" class="form-textinput" type="text" placeholder="AGE"/>
+		<label class="form-label" for="gender">Gender</label>
+		<div class="checkbox-block">
+			<input id="gender-female" name="gender" class="form-radio" type="radio" value="female"/>
+			<label for="gender-female">Female</label>
+		</div>
+		<div class="checkbox-block">
+			<input id="gender-male" name="gender" class="form-radio" type="radio" value="male" checked/>
+			<label for="gender-male">Male</label>
+		</div>
+		<label class="form-label" for="orientation">Orientation</label>
+		<div class="checkbox-block">
+			<input id="orientation-female" name="orientation" class="form-radio" type="radio" value="female"/>
+			<label for="orientation-female">Female</label>
+		</div>
+		<div class="checkbox-block">
+			<input id="orientation-male" name="orientation" class="form-radio" type="radio" value="male"/>
+			<label for="orientation-male">Male</label>
+		</div>
+		<div class="checkbox-block">
+			<input id="orientation-both" name="orientation" class="form-radio" type="radio" value="both" checked/>
+			<label for="orientation-both">Both</label>
+		</div>
+		<label class="form-label" for="bio">Bio</label>
+		<textarea id="bio" class="form-textarea" name="bio" placeholder="BIO"></textarea>
+		<label class="form-label" for="interest">Interest</label>
+		<textarea id="interest" class="form-textarea" name="interest" placeholder="#football #music #travel"></textarea>
+		<div id="interest-list"></div>
+		<button id="save" class="form-button" type="submit">SAVE</button>
+		{# </form> #}
+	</div>
+</div>
+<div id="notification-alert"></div>
+	<script src=/public/js/alert.js></script>
+<script src=/public/js/profile.js></script>{% endblock %}{% block footer %}
+{% include "footer.twig" %}{% endblock %}

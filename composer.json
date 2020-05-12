@@ -1,0 +1,13 @@
+{
+    "require": {
+        "slim/slim": "3.6.0",
+        "slim/twig-view": "^2.5",
+        "cboden/ratchet": "^0.4.1",
+        "guzzlehttp/guzzle": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app"
+        }
+    }
+}

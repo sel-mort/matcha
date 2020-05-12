@@ -1,0 +1,24 @@
+{% extends 'layouts/app.twig' %}
+{% block title %}
+	Notification
+{% endblock %}
+{% block header %}
+	{% include "header.twig" %}
+{% endblock %}
+{% block content %}
+	<div class="xlarge centered big-vertical-padding">
+		<div class="form big-form centered">
+			<h1>Notification</h1>
+			<div id="data-section">
+				<div id="notification-data" class="hidden">
+					{{ data }}
+				</div>
+			</div>
+			<div id="data-container"></div>
+		</div>
+	</div>
+	<script src=/public/js/notification.js></script>
+{% endblock %}
+{% block footer %}
+	{% include "footer.twig" %}
+{% endblock %}

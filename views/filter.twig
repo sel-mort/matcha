@@ -1,0 +1,94 @@
+{% extends 'layouts/app.twig' %}
+{% block head %}
+	<script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
+	<link href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css" rel="stylesheet"/>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		#map {
+			width: 100%;
+			height: 250px;
+			border-radius: 25px;
+		}
+		.coordinates {
+			background: rgba(0, 0, 0, 0.5);
+			color: #fff;
+			position: absolute;
+			bottom: 40px;
+			left: 10px;
+			padding: 5px 10px;
+			margin: 0;
+			font-size: 11px;
+			line-height: 18px;
+			border-radius: 3px;
+			display: none;
+		}
+	</style>
+{% endblock %}
+{% block title %}
+	Filter
+{% endblock %}
+{% block header %}
+	{% include "header.twig" %}
+{% endblock %}
+{% block content %}
+	<div class="xlarge centered big-vertical-padding">
+		<div class="form big-form centered">
+			<h1>Search</h1>
+			<div class="small-vertical-padding">
+				<label class="form-label" for="age">Age</label>
+				<p class="form-range-value center small-padding" id="">0</p>
+				<input id="age" class="form-range" type="range" name="age" min="0" max="150" value="0" valueid="0">
+			</div>
+			<div class="small-vertical-padding">
+				<label class="form-label" for="score">Score</label>
+				<p class="form-range-value center small-padding" id="">0</p>
+				<input id="score" class="form-range" type="range" name="score" min="0" max="1000" value="0" valueid="1">
+			</div>
+			<div class="small-vertical-padding">
+				<label class="form-label" for="distance">Distance</label>
+				<p class="form-range-value center small-padding" id="">0</p>
+				<input id="distance" class="form-range" type="range" name="distance" min="0" max="100000" value="0" valueid="2">
+			</div>
+			<label class="form-label" for="interest">Interest</label>
+			<div class="small-vertical-padding">
+				<textarea id="interest" class="form-textarea" name="interest" placeholder="#football #music #travel"></textarea>
+				<div id="interest-list"></div>
+			</div>
+			<a id="map-box-show" class="form-link">Custom position ?</a>
+			<div id="map-box">
+				<label class="form-label" for="map">Location</label>
+				<div id="map" class="small-vertical-margin"></div>
+				<pre id="coordinates" class="coordinates"></pre>
+				<input type="text" id="longitude" class="hidden">
+				<input type="text" id="latitude" class="hidden">
+			</div>
+			<button id="search" class="form-secondary-button block">Search</button>
+		</div>
+		<div class="form big-form centered small-vertical-margin">
+			<h1>Suggestions</h1>
+			<label class="form-label">Sort by</label>
+			<button id="sort-age" class="form-secondary-button">Age</button>
+			<button id="sort-location" class="form-secondary-button">Location</button>
+			<button id="sort-score" class="form-secondary-button">Fame rating</button>
+			<button id="sort-interest" class="form-secondary-button">Interest</button>
+			<div id="data-section">
+				<div id="user-profile-data" class="hidden"></div>
+			</div>
+			<div id="res-container" class="center small-vertical-padding"></div>
+			<button id="load" class="form-secondary-button block">Load more ...</button>
+		</div>
+	</div>
+	<div id="loader-container">
+		<div class="app-main-loader"></div>
+	</div>
+	<script src=/public/js/map.js></script>
+	<script src=/public/js/filter.js></script>
+	<div id="notification-alert"></div>
+	<script src=/public/js/alert.js></script>
+{% endblock %}
+{% block footer %}
+	{% include "footer.twig" %}
+{% endblock %}

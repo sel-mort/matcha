@@ -1,0 +1,67 @@
+{% extends 'layouts/app.twig' %}
+{% block title %}
+	User
+{% endblock %}
+{% block header %}
+	{% include "header.twig" %}
+{% endblock %}
+{% block content %}
+	<div class="large centered big-vertical-padding">
+		<div
+			class="form small-form centered">
+			{# <form method="POST" action={{ path_for('profile') }}> #}
+			<h1>User</h1>
+			<label class="form-label" for="score">Score</label>
+			<p id="score" name="score" class="form-p">points</p>
+			<label class="form-label" for="score">Connection status</label>
+			<p id="connection-status" name="connection-status" class="form-p">Last connection (01/01/2020)<div class="form-red-dot"></p>
+			</p>
+			<div id="data-section">
+				<div id="user-profile-data" class="hidden">
+					{{ user_profile }}
+				</div>
+			</div>
+
+			<div class="center vertical-padding">
+				<img id="avatar" class="form-image rounded centered" name="avatar" src=/public/images/user.png></img>
+			<input type="file" id="file" class="hidden" name="file">
+		</p>
+	</div>
+	<div class="center">
+		<p id="username" name="username" class="form-p small-padding fs2">username</p>
+		<div id="liked-status">
+		<pre>Likes you</pre>
+				<i class="material-icons" style="color:#FF6F91;">
+					favorite
+				</i>
+		</div>
+		<button id="like" class="small-button small-horizontal-margin" name="like" title="Like">
+			<i class="material-icons">
+				favorite_border
+			</i>
+		</button>
+		<button id="report" class="small-button small-horizontal-margin" name="report" title="Report">
+			<i class="material-icons">
+				info
+			</i>
+		</button>
+		<button id="block" class="small-button small-horizontal-margin" name="block" title="Block">
+			<i class="material-icons">
+				not_interested
+			</i>
+		</button>
+	</div>
+	<label class="form-label" for="firstname">First name</label>
+	<p id="firstname" name="firstname" class="form-p">firstnamec</p>
+	<label class="form-label" for="lastname">Last name</label>
+	<p id="lastname" name="lastname" class="form-p">lastnamec</p>
+	<label class="form-label" for="age">Age</label>
+	<p id="age" name="age" class="form-p">age</p>
+	<label class="form-label" for="gender">Gender</label>
+	<p id="gender" name="gender" class="form-p">gender</p>
+	<label class="form-label" for="orientation">Orientation</label>
+	<p id="orientation" name="orientation" class="form-p">orientation</p>
+	<label class="form-label" for="bio">Bio</label>
+	<textarea id="bio" class="form-textarea" name="bio" placeholder="BIO"></textarea>
+	<div id="interest"></div>
+</div></div><div id="notification-alert"></div><script src=/public/js/alert.js></script><script src=/public/js/user.js></script><script src=/public/js/status.js></script>{% endblock %}{% block footer %}{% include "footer.twig" %}{% endblock %}

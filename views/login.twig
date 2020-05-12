@@ -1,0 +1,29 @@
+{% extends 'layouts/app.twig' %}
+{% block title %}
+	Login
+{% endblock %}
+{% block header %}
+	{% include "logo.twig" %}
+{% endblock %}
+{% block content %}
+	<div class="large centered">
+		<div
+			class="form small-form centered">
+			{# <form method="POST" action={{ path_for('login') }}> #}
+			<h1>Login</h1>
+			<div id="data-section"></div>
+			<label class="form-label" for="username">Username</label>
+			<input id="username" name="username" class="form-textinput" type="text" placeholder="USERNAME" tabindex="0"/>
+			<label class="form-label" for="password">Password</label>
+			<input id="password" name="password" class="form-textinput" type="password" placeholder="PASSWORD" tabindex="1"/>
+			<button id="login" class="form-button" type="submit" tabindex="2">LOGIN</button>
+			<a class="form-link" href={{ path_for('register') }} tabindex="3">Create new account</a>
+			<a class="form-link" href={{ path_for('reset') }} tabindex="4">Forgot Password ?</a>
+			{# </form> #}
+		</div>
+	</div>
+	<script src=/public/js/login.js></script>
+{% endblock %}
+{% block footer %}
+	{% include "footer.twig" %}
+{% endblock %}

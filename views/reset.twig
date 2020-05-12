@@ -1,0 +1,29 @@
+{% extends 'layouts/app.twig' %}
+{% block title %}
+	Reset
+{% endblock %}
+{% block header %}
+	{% include "logo.twig" %}
+{% endblock %}
+{% block content %}
+	<div class="large centered">
+		<div
+			class="form small-form centered">
+			{# <form method="POST" action={{ path_for('reset') }}> #}
+			<h1>Reset</h1>
+			<div id="data-section"></div>
+			<label class="form-label" for="username">Username</label>
+			<input id="username" name="username" class="form-textinput" type="text" placeholder="USERNAME" tabindex="0"/>
+			<label class="form-label" for="email">Email</label>
+			<input id="email" name="email" class="form-textinput" type="email" placeholder="EMAIL" tabindex="1"/>
+			<button id="reset" class="form-button" type="submit" tabindex="2">RESET</button>
+			<a class="form-link" href={{ path_for('login') }} tabindex="3">Already have an account</a>
+			<a class="form-link" href={{ path_for('register') }} tabindex="4">Create new account</a>
+			{# </form> #}
+		</div>
+	</div>
+	<script src=/public/js/reset.js></script>
+{% endblock %}
+{% block footer %}
+	{% include "footer.twig" %}
+{% endblock %}

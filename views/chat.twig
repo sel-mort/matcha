@@ -1,0 +1,37 @@
+{% extends 'layouts/app.twig' %}
+{% block title %}
+	Chat
+{% endblock %}
+{% block header %}
+	{% include "header.twig" %}
+{% endblock %}
+{% block content %}
+	<div class="xlarge centered big-vertical-padding">
+		<div class="form big-form centered">
+			<h1>Chat</h1>
+			<div id="data-section">
+				<div id="matched-users-data" class="hidden">
+					{{ data }}
+				</div>
+				<div id="selected-user" class="hidden">
+				</div>
+			</div>
+			<div id="chat-users" class="small-vertical-margin">
+				
+			</div>
+			<div id="message-container">
+				<p class='center vertical-padding'>No messages to show</p>
+			</div>
+			<div id="chat-message-input">
+				<textarea id="chat-input" class="form-textarea" name="chat-input" placeholder="Your message here"></textarea>
+				<button id="send" class="default-form-button" type="submit">Send</button>
+			</div>
+		</div>
+	</div>
+	<script src=/public/js/chat.js></script>
+	<div id="notification-alert"></div>
+	<script src=/public/js/alert.js></script>
+{% endblock %}
+{% block footer %}
+	{% include "footer.twig" %}
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'layouts/app.twig' %}
+{% block title %}
+	Home
+{% endblock %}
+{% block header %}
+	{% include "header.twig" %}
+{% endblock %}
+{% block content %}
+	<div class="xlarge centered big-vertical-padding">
+		<div class="form big-form centered">
+			<h1>Suggestions</h1>
+			<label class="form-label">Sort by</label>
+			<button id="sort-age" class="form-secondary-button">Age</button>
+			<button id="sort-location" class="form-secondary-button">Location</button>
+			<button id="sort-score" class="form-secondary-button">Fame rating</button>
+			<button id="sort-interest" class="form-secondary-button">Interest</button>
+			<div id="data-section">
+				<div id="user-profile-data" class="hidden"></div>
+			</div>
+			<div id="res-container" class="center small-vertical-padding"></div>
+			<button id="load" class="form-secondary-button block">Load more ...</button>
+		</div>
+	</div>
+	<div id="loader-container">
+		<div class="app-main-loader"></div>
+	</div>
+	<div id="notification-alert"></div>
+	<script src=/public/js/home.js></script>
+	<script src=/public/js/alert.js></script>
+{% endblock %}
+{% block footer %}
+	{% include "footer.twig" %}
+{% endblock %}
